@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<!-- <link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css" /> -->
+<link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />
+<link rel="stylesheet" href="css/styles.css" />
+ <link rel="stylesheet"  href="css/jquery.ui.datepicker.mobile.css" /> 
+<!-- <script src="js/jquery.mobile-1.4.2.js"></script> -->
+<script src="js/jquery.mobile-1.0rc1.min.js"></script>
+<!-- <script src="js/jquery.mobile-1.4.2.min.js"></script> -->
+<script src="js/projecthome.js"></script>
+<script src="js/income.js"></script>
+<script src="js/jQuery-ui-datepicker.js"></script>
+<script src="js/jquery.ui.datepicker.mobile.js"></script>
+<script>
+  //reset type=date inputs to text
+  $( document ).bind( "mobileinit", function(){
+    $.mobile.page.prototype.options.degradeInputs.date = true;
+  });	
+</script>
+</head>
+<body>
+
+<div id="projectDetailsPage" data-role="page" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>Project Details</h1>
+	</div>
+	<div data-role="content">
+         <ul id="projectContentList" data-role="listview"></ul>
+    </div>
+</div>
+</body>
+</html>

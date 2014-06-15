@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Income</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />
+<link rel="stylesheet" href="css/styles.css" />
+ <link rel="stylesheet"  href="css/jquery.ui.datepicker.mobile.css" /> 
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.0rc1.min.js"></script>
+<script src="js/database.js"></script>
+<script src="js/income.js"></script>
+<script src="js/jQuery-ui-datepicker.js"></script>
+<script src="js/jquery.ui.datepicker.mobile.js"></script>
+<script>
+  //reset type=date inputs to text
+  $( document ).bind( "mobileinit", function(){
+    $.mobile.page.prototype.options.degradeInputs.date = true;
+  });	
+</script>
+</head>
+<body>
+	<form name="incomeform" data-ajax="false" method="post">
+	<div id="incomePage" data-role="page" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed">
+		<h1>Income</h1>
+	</div>
+		<!-- Content Tile -->
+		<div class="ui-field-contain">
+			<label for="projectID">Project ID:</label>
+			<input type="text" readonly="readonly" name="projectID" id="projectID"> 
+			<label for="amount">Amount(Rs.):</label>
+			<input type="text" name="amount" id="amount"> 
+			<label for="receivedFrom">Received From:</label>
+			<input type="text" name="receivedFrom" id="receivedFrom"> 
+			<label for="receivedby">Received By:</label>
+			<input type="text" name="receivedby" id="receivedby"> 
+			<label for="receiveddate">Date:</label>
+			<input type="date" name="receiveddate" id="receiveddate">
+<!-- 			<input type="date" name="receiveddate" id="receiveddate">  -->
+			<label for="remarks">Remarks:</label>
+			<input type="text" name="remarks" id="remarks"> 
+			<input type="button" id = "submit" value = "submit"/> 
+		</div>
+		<div data-role="fieldcontain">
+	     	    <label for="date">Date Input:</label>
+	     	    <input type="date" name="date" id="date" value=""  />
+			</div>		
+		</div>
+	</form>
+</body>
+</html>

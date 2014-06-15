@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Employee Directory</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />
+<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet"  href="css/jquery.ui.datepicker.mobile.css" /> 
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.0rc1.min.js"></script>
+<script src="js/database.js"></script>
+<script src="js/projectlist.js"></script>
+<script src="js/projecthome.js"></script>
+<script src="js/income.js"></script>
+<script src="js/jQuery-ui-datepicker.js"></script>
+<script src="js/jquery.ui.datepicker.mobile.js"></script>
+<script>
+  //reset type=date inputs to text
+  $( document ).bind( "mobileinit", function(){
+    $.mobile.page.prototype.options.degradeInputs.date = true;
+  });	
+</script>
+</head>
+    
+<body>
+        
+<div id="projectListPage" data-role="page" >
+
+	<div data-role="header" data-position="fixed">
+		<h1>Project Directory</h1>
+	</div>
+
+	<div data-role="content">
+         <ul id="projectList" data-role="listview"></ul>
+    </div>	
+    <div data-role="fieldcontain">
+	     	    <label for="date">Date Input:</label>
+	     	    <input type="date" name="date" id="date" value=""  />
+			</div>			
+
+</div>
+
+</body>
+
+</html>
